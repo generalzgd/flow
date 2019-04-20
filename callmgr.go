@@ -118,6 +118,7 @@ func (p *WorkFlow) Call(id uint32, timeout time.Duration, prevFun func(), doneFu
 * todo 异步执行的消息返回
 * if channel is closed, it will raise panic, then by recover to catch the panic
 * @param id 唯一标识id
+* @param data 返回需要处理的数据
 * @return 是否响应数据成功，对应pip不存在则失败
 */
 func (p *WorkFlow) OnAnsyBack(id uint32, data interface{}) (succ bool) {
